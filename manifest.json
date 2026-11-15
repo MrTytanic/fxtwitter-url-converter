@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "FxTwitter URL Converter",
+  "version": "1.0",
+  "description": "Converts Twitter/X post URLs into embed-friendly links for easy sharing.",
+  "icons": {
+    "48": "icons/fx-icon.svg"
+  },
+  "permissions": ["menus", "clipboardWrite"],
+  "host_permissions": [
+    "*://x.com/*",
+    "*://*.x.com/*",
+    "*://twitter.com/*",
+    "*://*.twitter.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*",
+        "*://*.x.com/*",
+        "*://twitter.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

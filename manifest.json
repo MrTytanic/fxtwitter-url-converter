@@ -26,5 +26,13 @@
       ],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fxtwitter-url-converter@addons.mozilla.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }
